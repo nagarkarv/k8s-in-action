@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testapp-liveness
+spec:
+  containers:
+    - image: vikramnagarkar/k8s-app
+      name: testapp-liveness
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 8080
