@@ -15,8 +15,7 @@ var handler = function(request, response)
 	else {
 		console.log("KILL receive from " + request.connection.remoteAddress);
 		response.writeHead(500);
-		response.end("Status:400 (NOT OK), You've hit " + os.hostname() + "\n");
-		count = 0;
+		response.end("Status:500 (NOT OK), You've hit " + os.hostname() + "\n");
 	}
 
 };
