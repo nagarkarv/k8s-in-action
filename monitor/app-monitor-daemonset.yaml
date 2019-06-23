@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name:app-monitor-daemonset 
+spec:
+  selector:
+    matchLabels:
+      name: app-monitor-daemonset
+  template:
+    metadata:
+      labels:
+        name: app-monitor-daemonset
+    spec:
+      nodeSelector:
+        monitor: yes
+      containers:
+      - name: app-monitor-daemonset 
+        image: vikramnagarkar/app-monitor-daemonset
