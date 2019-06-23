@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name:app-monitor-daemonset 
+  name: app-monitor-daemonset 
 spec:
   selector:
     matchLabels:
@@ -12,7 +12,7 @@ spec:
         name: app-monitor-daemonset
     spec:
       nodeSelector:
-        monitor: yes
+        env: dev 
       containers:
-      - name: app-monitor-daemonset 
-        image: vikramnagarkar/app-monitor-daemonset
+        - name: app-monitor-daemonset 
+          image: vikramnagarkar/app-monitor-daemonset
