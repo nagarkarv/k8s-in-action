@@ -3,18 +3,18 @@ kind: ReplicaSet
 metadata:
   name: app-replicaset
   labels:
-    app: ngnix
+    app: nginx
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      app: ngnix
+      app: nginx 
   template:
     metadata:
       labels:
-        app: ngnix
+        app: nginx 
     spec:
       containers:
       - name: nginx 
-        image: ngnix
+        image: nginx 
