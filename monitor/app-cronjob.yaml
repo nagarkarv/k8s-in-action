@@ -1,0 +1,15 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "* * * * *"
+  activeDeadlineSeconds: 20
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: k8s-monitor 
+            image: vikramnagarkar/k8s-monitor
+          restartPolicy: OnFailure
