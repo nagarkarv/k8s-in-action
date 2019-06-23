@@ -15,4 +15,4 @@ spec:
         env: dev 
       containers:
         - name: app-monitor-daemonset 
-          image: vikramnagarkar/app-monitor-daemonset
+          image: vikramnagarkar/k8s-monitor
